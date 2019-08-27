@@ -14,14 +14,14 @@ class HarfbuzzConan(ConanFile):
     default_options = "shared=False"
     generators = "cmake"
 
-    requires = "freetype2/1.0@tamas/repro"
+    requires = "freetype2/1.0@tamas/repro", "fontconfig/1.0@tamas/repro"
 
     def source(self):
         pass
 
     def build(self):
         self.run("touch libharfbuzz.so")
-        print(self.deps_cpp_info.lib_paths)
+        print(self.deps_cpp_info["zlib"].lib_paths)
 
     def package(self):
         self.copy("*.so", dst="lib")

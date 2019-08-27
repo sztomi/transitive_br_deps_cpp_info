@@ -1,8 +1,8 @@
 from conans import ConanFile
 
 
-class Freetype2Conan(ConanFile):
-    name = "freetype2"
+class ZlibConan(ConanFile):
+    name = "zlib"
     version = "1.0"
     license = "<Put the package license here>"
     author = "<Put your name here> <And your email here>"
@@ -13,16 +13,15 @@ class Freetype2Conan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     generators = "cmake"
-    requires = "zlib/1.0@tamas/repro"
 
     def source(self):
         pass
 
     def build(self):
-        self.run("touch libfreetype2.so")
+        self.run("touch libz.so")
 
     def package(self):
         self.copy("*.so", dst="lib")
 
     def package_info(self):
-        self.cpp_info.libs = ["freetype2"]
+        self.cpp_info.libs = ["z"]

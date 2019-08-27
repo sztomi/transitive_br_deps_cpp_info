@@ -3,7 +3,7 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-pkgs=(ffmpeg fontconfig freetype2 harfbuzz)
+pkgs=(ffmpeg fontconfig freetype2 harfbuzz zlib)
 ns="tamas/repro"
 export CONAN_USER_HOME=$DIR/conan_cache
 
