@@ -6,7 +6,7 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-conan = "1.18.1"
+conan = "1.4.4"
 
 [tool.poetry.dev-dependencies]
 
